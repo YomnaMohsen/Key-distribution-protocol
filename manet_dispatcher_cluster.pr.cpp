@@ -31,18 +31,20 @@ const char manet_dispatcher_cluster_pr_cpp [] = "MIL_3_Tfile_Hdr_ 145A 30A model
 #include<iostream>
 //new
 
+//Done by me
 
+//Start  code of AES
 using namespace std;
 #define uchar unsigned char // 8-bit byte
 #define uint unsigned long // 32-bit word
 
-
+////////////////////////////////////////end
 /* Transition Macros				*/
 #define		SELF_INTERRUPT 		(OPC_INTRPT_SELF == intrpt_type)
 #define		STREAM_INTERRUPT 	(OPC_INTRPT_STRM == intrpt_type)
 
 ////////////////////////////////////////////////////////////////////////////////
-
+//Done by me
 //msg type
 // msg sent from global node to head
 #define    head    1 
@@ -294,7 +296,7 @@ uchar gf_mul[256][6] = {
    {0xe7,0x19,0x4f,0xa8,0x9a,0x83},{0xe5,0x1a,0x46,0xa3,0x97,0x8d}
 };
 
-
+//////////////////////end of AES
 
 
 //**********************************************************************************
@@ -309,7 +311,7 @@ typedef struct ManetT_Flow_Info
 	} ManetT_Flow_Info;
 
 
-
+//Done by me
 // def for handling msgs
  struct msg_info
 	{
@@ -342,7 +344,7 @@ bool New_comer;
 	bool New;
 	
 	};
-
+//End of code
 /** Function prototypes.			**/
 static void				manet_rpg_sv_init (void);
 static void				manet_rpg_register_self (void);
@@ -352,6 +354,7 @@ static void				manet_rpg_packet_flow_info_read (void);
 static void				manet_rpg_generate_packet (void);
 static void				manet_rpg_packet_destroy (Packet*	pkptr);
 
+//Done by me
 // /new
 void             		send_members(Prg_List * list);
 void             		get_keys(Prg_List * list);
@@ -403,6 +406,7 @@ void ann_comer(Objid cid);
 void ann_overhead(Objid src_node,int size);
 void packet_destroy (Packet*	pkptr);
 //*************************************************************************************
+//End of added code
 
 /* End of Header Block */
 
@@ -895,6 +899,7 @@ manet_rpg_packet_destroy (Packet*	pkptr)//new
 	
 	FOUT;
 	}
+//Done by me
 void packet_destroy(Packet*	pkptr)//new 
 	{
 
@@ -2775,7 +2780,7 @@ void ann_overhead(Objid src_node,int size)
 
 
 }
-
+//ENd of added code
 /* End of Function Block */
 
 /* Undefine optional tracing in FIN/FOUT/FRET */
