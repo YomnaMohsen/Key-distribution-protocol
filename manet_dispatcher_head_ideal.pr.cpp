@@ -40,7 +40,7 @@ using namespace std;
 #define		STREAM_INTERRUPT 	(OPC_INTRPT_STRM == intrpt_type)
 
 ////////////////////////////////////////////////////////////////////////////////
-
+//Done by me
 //msg type
 // msg sent from global node to head
 #define    head    1 
@@ -59,7 +59,7 @@ static unsigned char initkey[16]={0xA,0xE,0x3,0x2,0x9,0x2,0x3,0x2,0xE,0xA,0x6,0x
 static unsigned char  initkey2[16]={0xD,0xF,0x3,0x8,0x7,0x6,0x4,0x7,0xB,0x5,0x3,0xC,0x9,0xE,0xF,0x5};
 // Prg_List* symkey;// to store key for head
 
-
+//end code
 
 //**********************************************************************************
 /* Structure to hold information about a flow	*/
@@ -73,7 +73,7 @@ typedef struct ManetT_Flow_Info
 	} ManetT_Flow_Info;
 
 
-
+//Done by me
 // def for handling msgs
  struct msg_info
 	{
@@ -91,7 +91,7 @@ typedef struct ManetT_Flow_Info
 	double  y;
 	
 	};
- 
+ //////end code
 
 /** Function prototypes.			**/
 static void				manet_rpg_sv_init (void);
@@ -101,13 +101,13 @@ static void				manet_rpg_received_stats_update (double pkt_size);
 static void				manet_rpg_packet_flow_info_read (void);
 static void				manet_rpg_generate_packet (void);
 static void				manet_rpg_packet_destroy (Packet*	pkptr);
-
+//Done by me
 // new
 void             		create_key(unsigned char arr[]);
 
 void 					store_key(unsigned char key_arr[]);
 
-
+// end code
 
 
 
@@ -545,7 +545,7 @@ manet_rpg_generate_packet (void)
 	
 	FOUT;
 	}
-
+//Modified destory fn
 
 static void
 manet_rpg_packet_destroy (Packet*	pkptr)//new 
@@ -581,6 +581,8 @@ manet_rpg_packet_destroy (Packet*	pkptr)//new
 	
 	FOUT;
 	}
+	
+//Done by me
 
 //3
 void create_key(unsigned char arr_key[]) 	// if node is head
@@ -643,6 +645,7 @@ void store_key(unsigned char key_arr[])
 				
 				FOUT;
 	}
+//end my code
 
 /* End of Function Block */
 
@@ -758,7 +761,7 @@ manet_dispatcher_head_ideal_state::manet_dispatcher_head_ideal (OP_SIM_CONTEXT_A
 				/* layer.																*/
 				
 				op_intrpt_schedule_self (op_sim_time (), 0);
-				
+				//Done by me
 				cluster_key=prg_list_create();
 					prg_list_init(cluster_key);
 					symmetric_key=prg_list_create();
@@ -767,7 +770,7 @@ manet_dispatcher_head_ideal_state::manet_dispatcher_head_ideal (OP_SIM_CONTEXT_A
 				
 				
 						
-							
+				//ENd my code			
 				
 				  
 				
@@ -1040,7 +1043,7 @@ manet_dispatcher_head_ideal_state::manet_dispatcher_head_ideal (OP_SIM_CONTEXT_A
 				/* Get the interrupt type. This will be used to determine	*/
 				/* whether this is a self interrupt to generate a packet or	*/
 				/* a stream interrupt from ip_encap.						*/
-				
+				//Done by me
 				int  x;
 				
 				Packet * rcvd_pkt=OPC_NIL;
@@ -1093,7 +1096,7 @@ manet_dispatcher_head_ideal_state::manet_dispatcher_head_ideal (OP_SIM_CONTEXT_A
 						manet_rpg_packet_destroy(rcvd_pkt);
 						}
 					}
-				}
+				}//end code
 				FSM_PROFILE_SECTION_OUT (state6_exit_exec)
 
 
