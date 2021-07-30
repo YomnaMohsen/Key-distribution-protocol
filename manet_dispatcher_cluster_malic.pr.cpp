@@ -43,7 +43,7 @@ using namespace std;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-
+//Done by me
 //msg sent from head for hash_auth
 #define    auth_hash     3
 
@@ -218,6 +218,7 @@ class manet_dispatcher_cluster_malic_state
 		Stathandle	             		global_delay_hndl                               ;
 		IpT_Interface_Info*	    		iface_info_ptr                                  ;	/* IP interface information for this station node */
 		double	                 		next_pkt_interarrival                           ;
+	//Done by me
 		Prg_List *	             		cluster_key                                     ;
 		Prg_List *	             		symmetric_key                                   ;
 		bool	                   		misbehave                                       ;
@@ -262,6 +263,7 @@ VosT_Obtype manet_dispatcher_cluster_malic_state::obtype = (VosT_Obtype)OPC_NIL;
 #define global_delay_hndl       		op_sv_ptr->global_delay_hndl
 #define iface_info_ptr          		op_sv_ptr->iface_info_ptr
 #define next_pkt_interarrival   		op_sv_ptr->next_pkt_interarrival
+//Done by me
 #define cluster_key             		op_sv_ptr->cluster_key
 #define symmetric_key           		op_sv_ptr->symmetric_key
 #define misbehave               		op_sv_ptr->misbehave
@@ -646,7 +648,7 @@ manet_rpg_packet_destroy (Packet*	pkptr)//new
 
 
 
-
+//Done by me
 
 void re_hash(Objid id,Prg_List * list)// member reply auth hash to head
 	{
